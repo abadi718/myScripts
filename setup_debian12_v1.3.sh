@@ -2,7 +2,6 @@
 
 install_vscode() {
     echo "Installing Visual Studio Code..."
-
     if ! grep -q "packages.microsoft.com/repos/code" /etc/apt/sources.list.d/vscode.list; then
         sudo apt-get install wget gpg
         wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
